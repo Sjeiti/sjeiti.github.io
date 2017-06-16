@@ -37,17 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [
-  ["/project-invoice/favicon.ico","3750f8480d5860bf36ddb8623424c503"],
-  ["/project-invoice/index.html","53cd9793dbb20fb3501cd8d7b5676a7b"],
-  ["/project-invoice/inline.f277d41b74434fd4ea54.bundle.js","918bf02a60027f5bf3d5cd1a267b2113"],
-  ["/project-invoice/main.c025b0fe414694659d86.bundle.js","5dc1060d0b8e020768fa468a7ad33118"],
-  ["/project-invoice/polyfills.2f4fce266794794866ce.bundle.js","c1ce8f66a4e305207651118fec95cc31"],
-  ["/project-invoice/scripts.a0db7e7517fbf5e661b0.bundle.js","3ea801b1fc186fb27a3edaa6a9f87b3d"],
-  ["/project-invoice/static/img/logo.svg","9113d5f7753e0d90d3c04d10cb96001c"],
-  ["/project-invoice/styles.eeb0561164524e21a5d6.bundle.css","eeb0561164524e21a5d63d0d6d9d5a4d"],
-  ["/project-invoice/vendor.9d865569906627eb88b9.bundle.js","45a6023d7cf04bbb8b347b583e0e6ec8"]
-];
+var precacheConfig = [["/favicon.ico","3750f8480d5860bf36ddb8623424c503"],["/index.html","45950ef1ae00d1586d90e53576825d66"],["/inline.4d9dd3963b023dd7911a.bundle.js","6329d910e51bf1f75b33d88f636ca4fb"],["/main.a0c0b355f778df4d31ce.bundle.js","c61c8029ab22d0f17ed1df4e559e1f9e"],["/polyfills.2f4fce266794794866ce.bundle.js","c1ce8f66a4e305207651118fec95cc31"],["/scripts.a0db7e7517fbf5e661b0.bundle.js","3ea801b1fc186fb27a3edaa6a9f87b3d"],["/static/img/logo.svg","9113d5f7753e0d90d3c04d10cb96001c"],["/styles.eeb0561164524e21a5d6.bundle.css","eeb0561164524e21a5d63d0d6d9d5a4d"],["/vendor.9d865569906627eb88b9.bundle.js","45a6023d7cf04bbb8b347b583e0e6ec8"]];
 var cacheName = 'sw-precache-v3-sw-precache-' + (self.registration ? self.registration.scope : '');
 
 
@@ -186,10 +176,10 @@ self.addEventListener('install', function(event) {
         );
       });
     }).then(function() {
-
+      
       // Force the SW to transition from installing -> active state
       return self.skipWaiting();
-
+      
     })
   );
 });
@@ -209,9 +199,9 @@ self.addEventListener('activate', function(event) {
         );
       });
     }).then(function() {
-
+      
       return self.clients.claim();
-
+      
     })
   );
 });
