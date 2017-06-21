@@ -27,7 +27,7 @@
 // If you go that route, make sure that whenever you update your sw-precache dependency, you reconcile any
 // changes made to this original template file with your modified copy.
 
-// This generated service worker JavaScript will pre  cache your site's resources.
+// This generated service worker JavaScript will precache your site's resources.
 // The code needs to be saved in a .js file at the top-level of your site, and registered
 // from your pages in order to be used. See
 // https://github.com/googlechrome/sw-precache/blob/master/demo/app/js/service-worker-registration.js
@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["./project-invoice/favicon.ico","3750f8480d5860bf36ddb8623424c503"],["./project-invoice/index.html","a129275c5fb29ff159199a0c74696833"],["./project-invoice/inline.c1db42b26a842aa5c8c7.bundle.js","d9b04dfe3c89aea7c241b8a815c66fcc"],["./project-invoice/main.10b2a7a47aea671282ef.bundle.js","e1fe011d0000a2187d11c8a2979dc5cb"],["./project-invoice/polyfills.2f4fce266794794866ce.bundle.js","c1ce8f66a4e305207651118fec95cc31"],["./project-invoice/scripts.538658723ada4bd3bc12.bundle.js","3ea801b1fc186fb27a3edaa6a9f87b3d"],["./project-invoice/static/img/logo.svg","9113d5f7753e0d90d3c04d10cb96001c"],["./project-invoice/styles.eeb0561164524e21a5d6.bundle.css","eeb0561164524e21a5d63d0d6d9d5a4d"],["./project-invoice/vendor.6f0bd14d3e67ecb31ac9.bundle.js","41ab4ec9a6102fbb70ade90f8e998d33"]];
+var precacheConfig = [["./project-invoice/favicon.ico","3750f8480d5860bf36ddb8623424c503"],["./project-invoice/index.html","a129275c5fb29ff159199a0c74696833"],["./project-invoice/inline.c1db42b26a842aa5c8c7.bundle.js","d9b04dfe3c89aea7c241b8a815c66fcc"],["./project-invoice/main.10b2a7a47aea671282ef.bundle.js","e1fe011d0000a2187d11c8a2979dc5cb"],["./project-invoice/polyfills.2f4fce266794794866ce.bundle.js","c1ce8f66a4e305207651118fec95cc31"],["./project-invoice/scripts.538658723ada4bd3bc12.bundle.js","3ea801b1fc186fb27a3edaa6a9f87b3d"],["./project-invoice/static/img/logo.svg","9113d5f7753e0d90d3c04d10cb96001c"],["./project-invoice/static/js/sass.worker.js","7eb5398395311ba7b242fc2e8b242fda"],["./project-invoice/styles.eeb0561164524e21a5d6.bundle.css","eeb0561164524e21a5d63d0d6d9d5a4d"],["./project-invoice/vendor.6f0bd14d3e67ecb31ac9.bundle.js","41ab4ec9a6102fbb70ade90f8e998d33"]];
 var cacheName = 'sw-precache-v3-sw-precache-' + (self.registration ? self.registration.scope : '');
 
 
@@ -176,10 +176,10 @@ self.addEventListener('install', function(event) {
         );
       });
     }).then(function() {
-
+      
       // Force the SW to transition from installing -> active state
       return self.skipWaiting();
-
+      
     })
   );
 });
@@ -199,9 +199,9 @@ self.addEventListener('activate', function(event) {
         );
       });
     }).then(function() {
-
+      
       return self.clients.claim();
-
+      
     })
   );
 });
