@@ -42,7 +42,7 @@
   </app-root>
   <script>
     if (location.port!=='4201'&&'serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      navigator.serviceWorker.register('/project-invoice/service-worker.js').then(function(registration) {
         console.log('Service Worker registered', registration);
       }).catch(function(err) {
         console.log('Service Worker registration failed: ', err);
